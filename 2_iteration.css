@@ -1,0 +1,223 @@
+body {
+    background-color: aliceblue;
+}
+.header1 {
+    font-weight: bold;
+    font-size: 23px;
+    font-style: italic;
+    border: 2px dotted black;
+}
+.header2 {
+    font-weight: lighter;
+    font-family: fantasy;
+    color: darkblue;
+}
+.header{
+    text-align: center;
+}
+#header_in{
+    text-align: center;
+    color: brown;
+}
+#header_in1{
+    text-align: left;
+}
+#animals1 {
+    width: 35px;
+}
+#multimedia {
+    position: center;
+}
+/*оболочка*/
+table, th, td {
+    border: 2px dashed black;
+}
+/*псевдоклассы*/
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: crimson;
+}
+
+a:active {
+    color: blue;
+}
+/*псевдоэлемент для всех тегов Р*/
+p::first-line { /*псевдоелемент для 1й строки тега Р*/
+    color: #ed4456;
+    font-variant: small-caps;
+}
+/*непрозрачность*/
+img {
+    opacity: 0.35;
+    border-radius: 38px; /*скругляет картинку от заданной размерности в px*/
+}
+
+img:hover {
+    opacity: 1.0;
+}
+/*непрозрачность дива*/
+.first_div {
+    width: 1000px;
+    height: 500px;
+    background-color: crimson;
+    opacity: 0.5;
+    font-style: italic;
+}
+/*текст в диве*/
+.div_opasity {
+    background: url(https://big-rostov.ru/wp-content/uploads/2021/04/i-7-1.jpg) repeat;
+    border: 2px solid black;
+}
+
+.div_opasity1 {
+    margin: 100px;
+    background-color: #ffffff;
+    border: 3px dashed black;
+    opacity: 0.75;
+}
+
+.div_opasity1 p {
+    margin: 15%;
+    font-weight: inherit; /*наследуется у родителя*/
+    color: #000000;
+}
+/*оычная вертикальна панель выбора ссылок*/
+.ul_1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    border: 1px solid #000000;
+    /*position: fixed;*/
+    /*height: 100%;*/
+    overflow: auto;
+}
+
+/*
+.ul_li_a {
+    display: block;
+    width: 60px;
+}*/
+.ul_li_a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-bottom: 1px solid #ed4456;
+}
+/*li a:last-child {
+    border-bottom: none;
+}*/
+
+.ul_li_a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.div_lu_a {
+    margin-left:40%;
+    padding:5px 40px;
+    height:350px;"
+}
+/*Липкая горизонтальная панель*/
+.ul_2 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*visible - Отображается все содержание элемента, даже за пределами установленной высоты и ширины.
+    hidden - Отображается только область внутри элемента, остальное будет скрыто.
+    scroll - Всегда добавляются полосы прокрутки.
+    auto - Полосы прокрутки добавляются только при необходимости.
+    inherit - Наследует значение родителя*/
+    background-color: #234555;
+    /*position: fixed; фиксирует панель в зависимости от заданной top или bottom*/
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.li_2 {
+    float: left;
+    border-right: 1px solid #000000;
+}
+
+.ul_li_a2 {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.ul_li_a2:hover {
+    background-color: #000000;
+}
+/*РАСКРЫВАЮЩИЙСЯ ТЕКСТ*/
+.div_drop {
+    position: relative; /*выпадает прямо под кнопку*/
+    display: inline-block; /*встраивается между элемантами , не начинается с новой строки, не замещает контент*/
+    border: 5px solid ;
+}
+
+.div_drop1 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
+    padding: 12px 16px;
+    z-index: 1; /*накладывается на элемент  работает с position: absolute, fixed, relative.
+    чем больше значение , тем выше накладывается элемент. при равном значении индекса выводится последний написанный*/
+    border: 1px dashed ;
+}
+
+.div_drop:hover .div_drop1 { /*hover используется для наведения курсора мыши на обьект*/
+    display: block;
+}
+
+/*троеточие если невмещается в контент*/
+.div_max {
+    border: 1px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 100px;
+    background-color: burlywood;
+}
+
+
+/*
+.div_max1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding: 200px 20px 20px 200px;
+}*/
+
+/*стилизация для всех инпутов текст и пароль + раздвижение на максимальную ширину с помощью transition
+в фокусе при этом надо поставить ширину 100%*/
+input[type=text], input[type=password] {
+    width: 10%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid blue;
+    border-radius: 3px;
+    background-color: burlywood;
+    transition: width 0.8s ease-in-out;
+}
+input[type=text]:focus {
+    background-color: lightblue;
+    width: 100%;
+}
+input[type=password]:focus {
+    background-color: lightblue;
+    width: 100%;
+}

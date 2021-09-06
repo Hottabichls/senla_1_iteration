@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin: 0;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+.content_main {
+    display: flex;
+    flex: 0 0 66.6%;
+    flex-direction: column;
+    height: 100vh;
+    overflow: auto;
+}
+
+.yellow_block {
+    flex: 1 1 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 10px solid yellow;
+}
+
+.header {
+    display: flex;
+    padding: 20px;
+    border: 10px solid red;
+    justify-content: space-around;
+}
+
+.header_1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: black solid 1px;
+    background-color: #5bc1ff;
+    color: black;
+    font-style: italic;
+    font-family: "Adobe Gothic Std B";
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.header_11:hover {
+    background-color: #FFCCCC;
+    width: 200px;
+    height: 200px;
+    -webkit-transform: rotate(180deg); /*поворот на 180тградусов*/
+    transform: rotate(180deg);
+}
+
+.header_22:hover {
+    background-color: #FFCCCC;
+    width: 200px;
+    height: 200px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.sidebar_block {
+    display: grid;
+    grid-gap: 40px; /*отступы между колонками и строками*/
+    flex: 0 0 100px;
+}
+
+.sidebar_block_item {
+    border: 10px solid green;
+}
+
+.pink_block {
+    flex: 1 1 auto;
+    padding: 20px;
+    border: 10px solid pink;
+}
+
+.main_block {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+}
+
+@media (max-width: 1280px) {
+    body,
+    .main_block {
+        flex-direction: column;
+    }
+
+    .yellow_block {
+        position: sticky;
+        top: 0;
+        order: -1;
+    }
+
+    .sidebar_block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .sidebar_block_item {
+        flex: 0 0 100px;
+    }
+}
+
+.main_animation {
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.main_message {
+    color: white;
+    float: left;
+    margin-right: 2%;
+}
+
+.my_animation {
+    background-color: #ffa80a;
+    background-image: linear-gradient(to right,
+    rgba(0, 0, 0, .9) 25%,
+    rgba(0, 0, 0, .1) 50%,
+    rgba(0, 0, 0, .9) 75%);
+    color: white;
+    height: 100%;
+    width: 20%;
+
+    -webkit-animation: 4s linear 0s infinite alternate my_animation_1;
+    animation: 7s linear 0s infinite alternate my_animation_1;
+}
+
+@-webkit-keyframes my_animation_1 {
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: 80%;
+    }
+}
+
+.main_animation1 {
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.main_message1 {
+    color: white;
+    float: left;
+    margin-right: 2%;
+}
+
+.my_animation1 {
+    background-color: #ffa80a;
+    background-image: linear-gradient(to right,
+    rgba(0, 0, 0, .9) 25%,
+    rgba(0, 0, 0, .1) 50%,
+    rgba(0, 0, 0, .9) 75%);
+    color: white;
+    height: 100%;
+    width: 20%;
+
+    -webkit-animation: 4s linear 0s infinite alternate my_animation_2;
+    animation: 5s linear 0s infinite alternate my_animation_2;
+}
+
+@-webkit-keyframes my_animation_2 {
+	from {
+		margin-left: -20%;
+	}
+	to {
+		margin-left: 100%;
+	}
+}
+
+.main_animation2 {
+    background-color: gray;
+    height: 100px;
+    width: 100%;
+    /*overflow: hidden;*/
+	border: black 2px 	solid;
+}
+
+
+#my_animation2 {
+    -webkit-animation: my_animation2 0.5s linear infinite;
+    animation: my_animation2 0.5s linear infinite;
+}
+
+@-webkit-keyframes my_animation2 {
+    50% {
+        color: rgb(34, 34, 34);
+    }
+    51% {
+        color: rgba(34, 34, 34, 0);
+    }
+    100% {
+        color: rgba(34, 34, 34, 0);
+    }
+}
+
+@keyframes my_animation2 {
+    50% {
+        color: rgb(34, 34, 34);
+    }
+    51% {
+        color: rgba(34, 34, 34, 0);
+    }
+    100% {
+        color: rgba(34, 34, 34, 0);
+    }
+}

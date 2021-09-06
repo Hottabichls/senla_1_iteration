@@ -1,5 +1,5 @@
 body {
-    background-color: aliceblue;
+    background-color: dimgrey;
 }
 .header1 {
     font-weight: bold;
@@ -9,7 +9,7 @@ body {
 }
 .header2 {
     font-weight: lighter;
-    font-family: fantasy;
+    font-family: "Arial Black";
     color: darkblue;
 }
 .header{

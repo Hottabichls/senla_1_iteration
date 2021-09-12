@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+        table {display: flex;
+           /* table-layout: fixed; !* Фиксированная ширина ячеек *!*/
+            /*width: 100%; !* Ширина таблицы *!*/
+        }
+        /*.table1 { height: 600px; }*/
+       /* .table2 { width: 60px; }*/
+        .table3 {display: flex;
+            align-content: start;
+        /*justify-content: right;*/
+        }
+    </style>
+</head>
+<body>
+<table width="66%"  border="1">
+    <col width="66%" class="table1">
+    <tr>
+        <td height="300px">2x ширина</td>
+    </tr>
+</table>
+<table class="table3" width="33%"  border="1">
+    <col width="33%" class="table1">
+        <td height="1280px">1x ширина</td>
+    </tr>
+</table>
+<table border="1">
+    <col width="100px" >
+</br>
+    <tr >
+    <td height="100px">Нефть</td>
+</tr>
+    <tr >
+        <td height="100px">Нефть</td>
+    </tr>
+    <tr >
+        <td height="100px">Нефть</td>
+    </tr>
+    </br>
+</table>
+</body>
+</html>

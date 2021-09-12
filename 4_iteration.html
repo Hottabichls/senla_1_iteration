@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4_iteration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./4_iteration_js.js"></script>
+ <!--   <style>
+        .focused { outline: 1px solid red; }
+        .invalid { border-color: red; }
+        #error { color: red };
+        li { cursor: wait; }
+        :focus { outline: 1px dashed green; }
+        #parent {
+            background: #99C0C3;
+            width: 160px;
+            height: 120px;
+            position: relative;
+        }
+
+        #child {
+            background: #FFDE99;
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        textarea {
+            height: 140px;
+            width: 300px;
+            display: block;
+        }
+    </style>-->
+</head>
+<body>
+<p>Число1: <input type="text" id="n1"></p>
+<p>Число2: <input type="text" id="n2"></p>
+<button onclick="plus()">Сложить</button>
+<button onclick="minus()">Вычесть</button>
+<button onclick="umnozit()">Умножить</button>
+<button onclick="podelit()">Поделить</button>
+<button onclick="koren()">Квадратный корень</button>
+<hr>
+<p id="out">Результат:</p>
+<!--
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<div>
+    <p>Кликни на <code onclick="alert('Обработчик для Div сработал!')">МЕНЯ</code></p>
+</div>
+
+<form id="form">
+    <input type="text" name="name" value="Имя">
+</form>
+
+<form onclick="alert('form')">
+    FORM
+    <div onclick="alert('div')">DIV
+        <p onclick="alert('p')">P</p>
+    </div>
+</form>
+
+
+<form id="form1">
+    FORM
+    <div>DIV
+        <p>P</p>
+    </div>
+</form>
+
+<button id="myButton">Нажми Alt+Shift+Click на мне!</button>
+
+
+<hr>
+
+
+Ваш email: <input type="email" id="input">
+<div id="error"></div>
+
+<ul>
+    <li class="li1" tabindex="1">1</li>
+    <li class="li1" tabindex="0">0</li>
+    <li class="li1" tabindex="2">2</li>
+    <li class="li1" tabindex="-1">-1</li>
+</ul>
+
+<div id="parent" onmouseover="mouselog(event)" onmouseout="mouselog(event)">parent
+    <div id="child">child</div>
+</div>
+
+<textarea id="text"></textarea>
+<input type="button" onclick="text.value=''" value="Очистить">
+-->
+
+<!--<script>
+    form.addEventListener("focusin", () => form.classList.add('focused'));
+    form.addEventListener("focusout", () => form.classList.remove('focused'));
+
+    input.onblur = function () {
+        if (!input.value.includes('@')) { // не email
+            input.classList.add('invalid');
+            error.innerHTML = 'Пожалуйста, введите правильный email.'
+        }
+    };
+
+    input.onfocus = function () {
+        if (this.classList.contains('invalid')) {
+            // удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
+            this.classList.remove('invalid');
+            error.innerHTML = "";
+        }
+    };
+
+
+
+    myButton.onclick = function (event) {
+        if (event.altKey && event.shiftKey) {
+            alert('Ура!');
+        }
+    };
+
+
+    form1.onclick = function(event) {
+        event.target.style.backgroundColor = 'yellow';
+        setTimeout(() => {
+            alert("target = " + event.target.tagName + ", this=" + this.tagName);
+            event.target.style.backgroundColor = ''
+        }, 500);
+    };
+
+    function mouselog(event) {
+        let d = new Date();
+        text.value += `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()} | ${event.type} [target: ${event.target.id}]\n`.replace(/(:|^)(\d\D)/, '$10$2');
+        text.scrollTop = text.scrollHeight;
+    }
+</script>-->
+</body>
+</html>
